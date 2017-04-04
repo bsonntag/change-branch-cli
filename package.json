@@ -2,12 +2,23 @@
   "name": "change-branch-cli",
   "version": "1.0.0",
   "description": "Cli tool to change git branches interactively.",
+  "keywords": ["git"],
   "main": "index.js",
+  "bin": {
+    "change-branch": "index.js"
+  },
   "scripts": {},
   "author": "Benjamim Sonntag <benjamimsonntag@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^3.0.6",
     "simple-git": "^1.70.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsonntag/change-git-branch-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bsonntag/change-git-branch-cli/issues"
   }
 }
