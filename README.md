@@ -1,4 +1,4 @@
-# change-git-branch-cli
+# change-branch-cli
 
 > Cli tool to change git branches interactively.
 
@@ -7,13 +7,13 @@
 With npm:
 
 ```
-$ npm install -g change-git-branch-cli
+$ npm install -g change-branch-cli
 ```
 
 With yarn:
 
 ```
-$ yarn global add change-git-branch-cli
+$ yarn global add change-branch-cli
 ```
 
 ## Usage
