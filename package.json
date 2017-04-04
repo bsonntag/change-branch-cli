@@ -1,0 +1,13 @@
+{
+  "name": "change-branch-cli",
+  "version": "1.0.0",
+  "description": "Cli tool to change git branches interactively.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Benjamim Sonntag <benjamimsonntag@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^3.0.6",
+    "simple-git": "^1.70.0"
+  }
+}
