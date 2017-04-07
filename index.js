@@ -3,6 +3,11 @@
 const git = require('./git')
 const inquirer = require('inquirer')
 const meow = require('meow')
+const pkg = require('./package.json')
+const updateNotifier = require('update-notifier')
+
+updateNotifier({ pkg })
+  .notify({ defer: false })
 
 const cli = meow(
   `
