@@ -10,22 +10,38 @@ const cli = meow(
       $ change-branch
 
     Options
+      -a, --all   Show all branches, even remotes
       -h, --help  Display this help and exit
   `,
   {
     alias: {
+      a: 'all',
       h: 'help',
     },
   }
 )
 
+const remotesRegex = /^remotes\//
+
+const getChoices = branches => {
+  if (cli.flags.all) {
+    return branches.map(branch => branch.replace(remotesRegex, ''))
+  }
+
+  return branches.filter(branch => !branch.match(remotesRegex))
+}
+
 const repo = git.openRepo()
 
 repo.getBranches(repo)
   .then(result => {
+    const choices = getChoices(result.all)
+    const currentIndex = choices.indexOf(result.current)
+    const defaultChoice = Math.max(currentIndex, 0)
+
     return inquirer.prompt([{
-      choices: result.all,
-      default: result.all.indexOf(result.current),
+      choices,
+      default: defaultChoice,
       message: 'Choose a branch',
       name: 'branch',
       type: 'list',
