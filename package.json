@@ -13,9 +13,9 @@
   "author": "Benjamim Sonntag <benjamimsonntag@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^3.0.6",
+    "inquirer": "3.0.6",
     "meow": "3.7.0",
-    "simple-git": "^1.70.0"
+    "simple-git": "1.70.0"
   },
   "repository": {
     "type": "git",
