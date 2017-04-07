@@ -2,6 +2,8 @@
 
 > Cli tool to change git branches interactively.
 
+Requires git to be installed and the current directory to be a git repository.
+
 ## Installation
 
 With npm:
