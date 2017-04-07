@@ -1,6 +1,6 @@
 {
   "name": "change-branch-cli",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Cli tool to change git branches interactively.",
   "keywords": [
     "git"
