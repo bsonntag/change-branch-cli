@@ -1,7 +1,23 @@
 #!/usr/bin/env node
 
-const inquirer = require('inquirer')
 const git = require('./git')
+const inquirer = require('inquirer')
+const meow = require('meow')
+
+const cli = meow(
+  `
+    Usage
+      $ change-branch
+
+    Options
+      -h, --help  Display this help and exit
+  `,
+  {
+    alias: {
+      h: 'help',
+    },
+  }
+)
 
 const repo = git.openRepo()
 
